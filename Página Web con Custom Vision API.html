@@ -6,20 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Reto Master Custom Vision API</title>
 </head>
-<body>
-    <h1 id="titulo" class="titulo-class">Identifica el animal</h1>
-    <p id="instrucciones" style="border: 2px,solid,blue;">
-        Ingresa la URL de una imagen de un animal
-    </p>
-
-    <form id="MyForm">
+<body class="fondo">
+    <h1 id="titulo"><span class="titulo-class">Identifica el felino</span></h1>
+    <p id="instrucciones"><span class="instrucciones_class">Ingresa la URL de una imagen de un felino</span></p>
+    <form id="MyForm"><span class="MyForm-class">
         <input id="url" type="url" placeholder="URL de la imagen">
-        <!--<input type="password">-->
         <button type="button" onclick="sendtoAzureApi()">Enviar</button>
+        </span>
     </form>
-
+<div class="result-class">
     <p id="result_space"></p>
-
+</div>
 </body>
 </html>
 
@@ -50,14 +47,26 @@
             const finalPrediction = round(majorProbability * 100);
 
             switch (majorElement) {
-                case "Picasso":
-                    document.getElementById("result_space").innerHTML="La foto que me mandaste es de un Picasso con probabilidad del " + finalPrediction + " %"
+                case "pantera":
+                    document.getElementById("result_space").innerHTML="La foto que mandaste es de una pantera con probabilidad del " + finalPrediction + " %"
                     break;
-                case "Rembrandt":
-                    document.getElementById("result_space").innerHTML="La foto que me mandaste es de un Rembrandt con probabilidad del " + finalPrediction + " %"
+                case "león":
+                    document.getElementById("result_space").innerHTML="La foto que mandaste es de un león con probabilidad del " + finalPrediction + " %"
                     break;
-                case "cuadro":
-                    document.getElementById("result_space").innerHTML="La foto que me mandaste es de un cuadro con probabilidad del " + finalPrediction + " %"
+                case "tigre":
+                    document.getElementById("result_space").innerHTML="La foto que mandaste es de un tigre con probabilidad del " + finalPrediction + " %"
+                    break;
+                case "puma":
+                    document.getElementById("result_space").innerHTML="La foto que mandaste es de un puma con probabilidad del " + finalPrediction + " %"
+                    break;
+                case "lince":
+                    document.getElementById("result_space").innerHTML="La foto que mandaste es de un lince con probabilidad del " + finalPrediction + " %"
+                    break;
+                case "gato":
+                    document.getElementById("result_space").innerHTML="La foto que mandaste es de un gato con probabilidad del " + finalPrediction + " %"
+                    break;
+                case "leopardo":
+                    document.getElementById("result_space").innerHTML="La foto que mandaste es de un leopardo con probabilidad del " + finalPrediction + " %"
                     break;
                 default:
                     document.getElementById("result_space").innerHTML="No puedo identificarlo"
@@ -85,4 +94,4 @@
         return Math.round(+(num[0] + 'e' + (num[1] ? (+num[1] - decimales) : -decimales) ) );  
     }
 
-</script>
+</script>       
