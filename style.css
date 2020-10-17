@@ -1,11 +1,36 @@
 .titulo-class {
-    color: royalblue;
+    color:whitesmoke;
+    background-color: black;
     padding: 10px;
+    margin: 75px;
 }
 
-#instrucciones {
-    font-weight: 700;
+.instrucciones_class {
+    color: gray;
+    background-color: honeydew;
+    font-weight: 400;
     padding: 10px;
-    margin: 50px;
-    border: 2px solid coral !important;
+    margin: 75px;
+}
+
+.MyForm-class {
+    padding: 10px;
+    margin: 65px;
+}
+
+.result-class {
+    color: #333231;
+    background-color: honeydew;
+    font-weight: 400;
+    margin: 75px;
+    background-size: inherit;
+    display: inline-block;
+}
+
+.fondo {
+    background-image: url('Portada.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: center;
 }
